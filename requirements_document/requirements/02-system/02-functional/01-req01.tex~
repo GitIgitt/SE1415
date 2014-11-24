@@ -1,0 +1,46 @@
+\paragraph{F001}
+\begin{description}
+  \item [Statement] 
+    \textit{On the last working day of each month, a summary of the drugs
+    prescribed, their cost, and the prescribing clinics shall be
+    generated. (see user requirement UR001)}
+  \item [Priority] \textit{A}
+\end{description}
+
+\paragraph{F002}
+\begin{description}
+  \item [Statement]
+    \textit{The system shall automatically generate the report for printing
+    after 17.30 on the last working day of the month.
+    (see user requirement UR001)}
+  \item [Prioriy] \textit{A}
+\end{description}
+
+\paragraph{F003}
+\begin{description}
+  \item [Statement] 
+    \textit{A report shall be created for each clinic and shall list the
+    individual drug names, the total number of prescriptions, the number of
+    doses prescribed, and the total cost of the prescribed drugs. 
+    (see user requirement UR001)}
+  \item [Priority] \textit{A}
+\end{description}
+
+\paragraph{F004}
+\begin{description}
+  \item [Statement] 
+    \textit{If drugs are available in different dose units (e.g., 10 mg, 20 mg)
+    separate reports shall be created for each dose unit. 
+    (see user requirement UR001)}
+  \item [Priority] \textit{A}
+\end{description}
+
+\paragraph{F005}
+\begin{description}
+  \item [Statement] 
+    \textit{Access to all cost reports shall be restricted to authorized users
+    listed on a management access control list. 
+    (see user requirement UR001)}
+  \item [Priority] \textit{A}
+\end{description}
+

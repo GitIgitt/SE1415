@@ -1,0 +1,34 @@
+\section{Scenario for collecting medical history}
+\begin{description}
+  \item [INITIAL ASSUMPTION:]
+    \textit{The patient has seen a medical receptionist who has created a record in the 
+    system and collected the patient’s personal information (name, address, age,
+    etc.). A nurse is logged on to the system and is collecting medical history.}
+  \item [NORMAL:]
+    \textit{The nurse searches for the patient by family name. If there is more than
+    one patient with the same surname, the given name (first name in English)
+    and date of birth are used to identify the patient. \newline
+    The nurse chooses the menu option to add medical history.  \newline
+    The nurse then follows a series of prompts from the system to enter
+    information about consultations elsewhere on mental health problems (free
+    text input), existing medical conditions (nurse selects conditions from
+    menu), medication currently taken (selected from menu), allergies (free
+    text), and home life (form).}
+  \item [WHAT CAN GO WRONG:]
+    \textit{The patient’s record does not exist or cannot be found. The nurse should
+    create a new record and record personal information. \newline
+    Patient conditions or medication are not entered in the menu. The nurse
+    should choose the ‘other’ option and enter free text describing the
+    condition/medication. \newline
+    Patient cannot/will not provide information on medical history. The nurse
+    should enter free text recording the patient’s inability/unwillingness to
+    provide information. The system should print the standard exclusion form   
+    stating that the lack of information may mean that treatment will be
+    limited or delayed. This should be signed and handed to the patient.}
+  \item [OTHER ACTIVITIES:]
+    \textit{Record may be consulted but not edited by other staff while information is
+    being entered.}
+  \item [SYSTEM STATE ON COMPLETION:]
+    \textit{User is logged on. The patient record including medical history is entered
+    in the database.}
+\end{description}

@@ -1,0 +1,6 @@
+\paragraph{NF002}
+\begin{description}
+  \item [Statement] \textit{Users of the MHC-PMS system shall authenticate
+    themselves using their health authority identity card.}
+  \item [Priority] A
+\end{description}
