@@ -1,0 +1,30 @@
+\ifglsentryexists{MHC-PMS}{}%
+{%
+\gls@defglossaryentry{MHC-PMS}%
+{%
+name={MHC-PMS},%
+sort={MHC-PMS},%
+type={main},%
+first={MHC-PMS},%
+firstplural={MHC-PMSs},%
+text={MHC-PMS},%
+plural={MHC-PMSs},%
+description={is the Mental Health Care Patient Management System; used as a case study here.},%
+descriptionplural={is the Mental Health Care Patient Management System; used as a case study here.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
