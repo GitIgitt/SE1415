@@ -7620,13 +7620,13 @@ HttpServletResponse aus der Java-API#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O59">
       <dia:attribute name="obj_pos">
-        <dia:point val="51.4132,90.535"/>
+        <dia:point val="56.0132,74.885"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="51.3632,90.485;60.4332,97.385"/>
+        <dia:rectangle val="55.9632,74.835;65.0332,81.735"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="51.4132,90.535"/>
+        <dia:point val="56.0132,74.885"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="8.9700000000000006"/>
@@ -8099,13 +8099,13 @@ HttpServletResponse aus der Java-API#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O62">
       <dia:attribute name="obj_pos">
-        <dia:point val="23.6412,92.2165"/>
+        <dia:point val="55.3412,92.1165"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="23.5912,92.1665;32.6612,98.0665"/>
+        <dia:rectangle val="55.2912,92.0665;64.3612,97.9665"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="23.6412,92.2165"/>
+        <dia:point val="55.3412,92.1165"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="8.9700000000000006"/>
@@ -9404,19 +9404,19 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="obj_pos">
-        <dia:point val="32.6615,95.1165"/>
+        <dia:point val="55.2925,95.0165"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="32.6115,93.135;51.4129,95.9665"/>
+        <dia:rectangle val="48.5657,77.485;56.0132,95.8665"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="32.6615,95.1165"/>
-        <dia:point val="42.0122,95.1165"/>
-        <dia:point val="42.0122,93.935"/>
-        <dia:point val="51.3629,93.935"/>
+        <dia:point val="55.2925,95.0165"/>
+        <dia:point val="48.6157,95.0165"/>
+        <dia:point val="48.6157,78.285"/>
+        <dia:point val="55.9632,78.285"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="0"/>
@@ -9424,7 +9424,7 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:enum val="0"/>
       </dia:attribute>
       <dia:attribute name="orth_autoroute">
-        <dia:boolean val="true"/>
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="text_colour">
         <dia:color val="#000000"/>
@@ -9549,16 +9549,16 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:point val="28.1324,71.5289"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="28.0824,71.4789;56.0982,91.2846"/>
+        <dia:rectangle val="28.0824,71.4789;60.6982,75.685"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="28.1324,71.5289"/>
-        <dia:point val="28.1324,81.3567"/>
-        <dia:point val="55.8982,81.3567"/>
-        <dia:point val="55.8982,90.4846"/>
+        <dia:point val="28.1324,72.7"/>
+        <dia:point val="60.4982,72.7"/>
+        <dia:point val="60.4982,74.885"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -9566,7 +9566,7 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:enum val="1"/>
       </dia:attribute>
       <dia:attribute name="orth_autoroute">
-        <dia:boolean val="true"/>
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="text_colour">
         <dia:color val="#000000"/>
@@ -9576,7 +9576,7 @@ HttpServletResponse aus der Java-API#</dia:string>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O23" connection="15"/>
-        <dia:connection handle="1" to="O59" connection="20"/>
+        <dia:connection handle="1" to="O59" connection="1"/>
       </dia:connections>
     </dia:object>
     <dia:object type="UML - Association" version="2" id="O72">
@@ -9620,16 +9620,16 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:point val="24.3461,71.9687"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="24.2961,71.9187;28.3262,92.9661"/>
+        <dia:rectangle val="24.2961,71.9187;60.0262,92.8661"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="24.3461,71.9687"/>
-        <dia:point val="24.3461,82.0674"/>
-        <dia:point val="28.1262,82.0674"/>
-        <dia:point val="28.1262,92.1661"/>
+        <dia:point val="24.3461,82.0174"/>
+        <dia:point val="59.8262,82.0174"/>
+        <dia:point val="59.8262,92.0661"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -9650,56 +9650,15 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:connection handle="1" to="O62" connection="18"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="UML - Generalization" version="1" id="O73">
+    <dia:object type="UML - Class" version="0" id="O73">
       <dia:attribute name="obj_pos">
-        <dia:point val="51.3629,93.935"/>
+        <dia:point val="-10.6046,70.8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="32.6115,93.085;51.4129,95.3757"/>
-      </dia:attribute>
-      <dia:attribute name="meta">
-        <dia:composite type="dict"/>
-      </dia:attribute>
-      <dia:attribute name="orth_points">
-        <dia:point val="51.3629,93.935"/>
-        <dia:point val="41.6122,93.935"/>
-        <dia:point val="41.6122,95.1165"/>
-        <dia:point val="32.6615,95.1165"/>
-      </dia:attribute>
-      <dia:attribute name="orth_orient">
-        <dia:enum val="0"/>
-        <dia:enum val="1"/>
-        <dia:enum val="0"/>
-      </dia:attribute>
-      <dia:attribute name="orth_autoroute">
-        <dia:boolean val="true"/>
-      </dia:attribute>
-      <dia:attribute name="text_colour">
-        <dia:color val="#000000"/>
-      </dia:attribute>
-      <dia:attribute name="line_colour">
-        <dia:color val="#000000"/>
-      </dia:attribute>
-      <dia:attribute name="name">
-        <dia:string>##</dia:string>
-      </dia:attribute>
-      <dia:attribute name="stereotype">
-        <dia:string>##</dia:string>
-      </dia:attribute>
-      <dia:connections>
-        <dia:connection handle="0" to="O59" connection="20"/>
-        <dia:connection handle="1" to="O62" connection="18"/>
-      </dia:connections>
-    </dia:object>
-    <dia:object type="UML - Class" version="0" id="O74">
-      <dia:attribute name="obj_pos">
-        <dia:point val="-11.1046,70.9"/>
-      </dia:attribute>
-      <dia:attribute name="obj_bb">
-        <dia:rectangle val="-11.1546,70.85;-3.4746,74.55"/>
+        <dia:rectangle val="-10.6546,70.75;-2.9746,74.45"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="-11.1046,70.9"/>
+        <dia:point val="-10.6046,70.8"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="7.5800000000000001"/>
@@ -9848,21 +9807,21 @@ HttpServletResponse aus der Java-API#</dia:string>
       </dia:attribute>
       <dia:attribute name="templates"/>
     </dia:object>
-    <dia:object type="UML - Generalization" version="1" id="O75">
+    <dia:object type="UML - Generalization" version="1" id="O74">
       <dia:attribute name="obj_pos">
         <dia:point val="-1.7172,78.1774"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-7.3646,74.5005;-0.8672,78.2274"/>
+        <dia:rectangle val="-6.8646,74.4005;-0.8672,78.2274"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="-1.7172,78.1774"/>
-        <dia:point val="-1.7172,75.9639"/>
-        <dia:point val="-7.3146,75.9639"/>
-        <dia:point val="-7.3146,74.5505"/>
+        <dia:point val="-1.7172,75.9139"/>
+        <dia:point val="-6.8146,75.9139"/>
+        <dia:point val="-6.8146,74.4505"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -9886,18 +9845,18 @@ HttpServletResponse aus der Java-API#</dia:string>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O19" connection="14"/>
-        <dia:connection handle="1" to="O74" connection="12"/>
+        <dia:connection handle="1" to="O73" connection="12"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="UML - Class" version="0" id="O76">
+    <dia:object type="UML - Class" version="0" id="O75">
       <dia:attribute name="obj_pos">
-        <dia:point val="-3.28792,92.38"/>
+        <dia:point val="18.6121,86.48"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-3.33792,92.33;6.11708,96.03"/>
+        <dia:rectangle val="18.5621,86.43;28.0171,90.13"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="-3.28792,92.38"/>
+        <dia:point val="18.6121,86.48"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="9.3550000000000004"/>
@@ -9906,7 +9865,7 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:real val="3.6000000000000001"/>
       </dia:attribute>
       <dia:attribute name="name">
-        <dia:string>#UserAnalisisRights#</dia:string>
+        <dia:string>#UserAnalysisRights#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
         <dia:string>##</dia:string>
@@ -10046,21 +10005,21 @@ HttpServletResponse aus der Java-API#</dia:string>
       </dia:attribute>
       <dia:attribute name="templates"/>
     </dia:object>
-    <dia:object type="UML - Generalization" version="1" id="O77">
+    <dia:object type="UML - Generalization" version="1" id="O76">
       <dia:attribute name="obj_pos">
         <dia:point val="-1.7172,82.478"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-2.5672,82.428;1.43958,92.3795"/>
+        <dia:rectangle val="-2.5672,82.428;23.3396,86.4795"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="-1.7172,82.478"/>
-        <dia:point val="-1.7172,87.8038"/>
-        <dia:point val="1.38958,87.8038"/>
-        <dia:point val="1.38958,92.3295"/>
+        <dia:point val="-1.7172,84.8538"/>
+        <dia:point val="23.2896,84.8538"/>
+        <dia:point val="23.2896,86.4295"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -10084,10 +10043,10 @@ HttpServletResponse aus der Java-API#</dia:string>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O19" connection="14"/>
-        <dia:connection handle="1" to="O76" connection="12"/>
+        <dia:connection handle="1" to="O75" connection="12"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="UML - Association" version="2" id="O78">
+    <dia:object type="UML - Association" version="2" id="O77">
       <dia:attribute name="name">
         <dia:string>##</dia:string>
       </dia:attribute>
@@ -10128,16 +10087,16 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:point val="2.9603,82.4277"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="2.9103,82.3777;30.2512,92.2166"/>
+        <dia:rectangle val="2.9103,82.3777;61.9512,100"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="2.9603,82.4277"/>
-        <dia:point val="2.9603,83.4"/>
-        <dia:point val="28.1262,83.4"/>
-        <dia:point val="28.1262,92.1666"/>
+        <dia:point val="2.9603,99.95"/>
+        <dia:point val="59.8262,99.95"/>
+        <dia:point val="59.8262,97.9165"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -10155,7 +10114,78 @@ HttpServletResponse aus der Java-API#</dia:string>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O19" connection="7"/>
-        <dia:connection handle="1" to="O62" connection="18"/>
+        <dia:connection handle="1" to="O62" connection="6"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="UML - Association" version="2" id="O78">
+      <dia:attribute name="name">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="direction">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="show_direction">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="assoc_type">
+        <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="role_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_a">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_a">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="role_b">
+        <dia:string>#data#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_b">
+        <dia:string>#1#</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_b">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_b">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="obj_pos">
+        <dia:point val="-30.833,57.716"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-30.883,56.966;-10.6044,73.45"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="-30.833,57.716"/>
+        <dia:point val="-13.1705,57.716"/>
+        <dia:point val="-13.1705,72.6"/>
+        <dia:point val="-10.6544,72.6"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="0"/>
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="orth_autoroute">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="text_colour">
+        <dia:color val="#000000"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O24" connection="13"/>
+        <dia:connection handle="1" to="O73" connection="12"/>
       </dia:connections>
     </dia:object>
     <dia:object type="UML - Association" version="2" id="O79">
@@ -10190,77 +10220,6 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:string>#1#</dia:string>
       </dia:attribute>
       <dia:attribute name="visibility_b">
-        <dia:enum val="3"/>
-      </dia:attribute>
-      <dia:attribute name="show_arrow_b">
-        <dia:boolean val="false"/>
-      </dia:attribute>
-      <dia:attribute name="obj_pos">
-        <dia:point val="-30.833,57.716"/>
-      </dia:attribute>
-      <dia:attribute name="obj_bb">
-        <dia:rectangle val="-30.883,56.966;-11.1046,73.55"/>
-      </dia:attribute>
-      <dia:attribute name="meta">
-        <dia:composite type="dict"/>
-      </dia:attribute>
-      <dia:attribute name="orth_points">
-        <dia:point val="-30.833,57.716"/>
-        <dia:point val="-15.3671,57.716"/>
-        <dia:point val="-15.3671,72.7"/>
-        <dia:point val="-11.1546,72.7"/>
-      </dia:attribute>
-      <dia:attribute name="orth_orient">
-        <dia:enum val="0"/>
-        <dia:enum val="1"/>
-        <dia:enum val="0"/>
-      </dia:attribute>
-      <dia:attribute name="orth_autoroute">
-        <dia:boolean val="false"/>
-      </dia:attribute>
-      <dia:attribute name="text_colour">
-        <dia:color val="#000000"/>
-      </dia:attribute>
-      <dia:attribute name="line_colour">
-        <dia:color val="#000000"/>
-      </dia:attribute>
-      <dia:connections>
-        <dia:connection handle="0" to="O24" connection="13"/>
-        <dia:connection handle="1" to="O74" connection="12"/>
-      </dia:connections>
-    </dia:object>
-    <dia:object type="UML - Association" version="2" id="O80">
-      <dia:attribute name="name">
-        <dia:string>##</dia:string>
-      </dia:attribute>
-      <dia:attribute name="direction">
-        <dia:enum val="1"/>
-      </dia:attribute>
-      <dia:attribute name="show_direction">
-        <dia:boolean val="false"/>
-      </dia:attribute>
-      <dia:attribute name="assoc_type">
-        <dia:enum val="0"/>
-      </dia:attribute>
-      <dia:attribute name="role_a">
-        <dia:string>##</dia:string>
-      </dia:attribute>
-      <dia:attribute name="multipicity_a">
-        <dia:string>##</dia:string>
-      </dia:attribute>
-      <dia:attribute name="visibility_a">
-        <dia:enum val="3"/>
-      </dia:attribute>
-      <dia:attribute name="show_arrow_a">
-        <dia:boolean val="false"/>
-      </dia:attribute>
-      <dia:attribute name="role_b">
-        <dia:string>#data#</dia:string>
-      </dia:attribute>
-      <dia:attribute name="multipicity_b">
-        <dia:string>#1#</dia:string>
-      </dia:attribute>
-      <dia:attribute name="visibility_b">
         <dia:enum val="1"/>
       </dia:attribute>
       <dia:attribute name="show_arrow_b">
@@ -10270,7 +10229,7 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:point val="63.6,34.825"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="1.33958,34.025;63.8,102.891"/>
+        <dia:rectangle val="23.2396,34.025;63.8,92.35"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -10278,10 +10237,10 @@ HttpServletResponse aus der Java-API#</dia:string>
       <dia:attribute name="orth_points">
         <dia:point val="63.6,34.825"/>
         <dia:point val="63.6,34.8158"/>
-        <dia:point val="50.2015,34.8158"/>
-        <dia:point val="50.2015,102.841"/>
-        <dia:point val="1.38958,102.841"/>
-        <dia:point val="1.38958,96.0291"/>
+        <dia:point val="46.1874,34.8158"/>
+        <dia:point val="46.1874,92.3"/>
+        <dia:point val="23.2896,92.3"/>
+        <dia:point val="23.2896,90.1295"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -10301,10 +10260,10 @@ HttpServletResponse aus der Java-API#</dia:string>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O11" connection="3"/>
-        <dia:connection handle="1" to="O76" connection="12"/>
+        <dia:connection handle="1" to="O75" connection="12"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="UML - Generalization" version="1" id="O81">
+    <dia:object type="UML - Generalization" version="1" id="O80">
       <dia:attribute name="obj_pos">
         <dia:point val="25.3564,13.165"/>
       </dia:attribute>
@@ -10345,7 +10304,7 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:connection handle="1" to="O25" connection="1"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="UML - Generalization" version="1" id="O82">
+    <dia:object type="UML - Generalization" version="1" id="O81">
       <dia:attribute name="obj_pos">
         <dia:point val="25.3564,13.165"/>
       </dia:attribute>
@@ -10386,7 +10345,7 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:connection handle="1" to="O22" connection="1"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="UML - Generalization" version="1" id="O83">
+    <dia:object type="UML - Generalization" version="1" id="O82">
       <dia:attribute name="obj_pos">
         <dia:point val="25.3564,13.1147"/>
       </dia:attribute>
@@ -10427,7 +10386,7 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:connection handle="1" to="O54" connection="8"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="UML - Generalization" version="1" id="O84">
+    <dia:object type="UML - Generalization" version="1" id="O83">
       <dia:attribute name="obj_pos">
         <dia:point val="25.3564,13.1147"/>
       </dia:attribute>
@@ -10468,7 +10427,7 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:connection handle="1" to="O63" connection="1"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="UML - Association" version="2" id="O85">
+    <dia:object type="UML - Association" version="2" id="O84">
       <dia:attribute name="name">
         <dia:string>##</dia:string>
       </dia:attribute>
@@ -10509,7 +10468,7 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:point val="-3.2447,42.9327"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-9.0546,42.1827;-3.1947,71.75"/>
+        <dia:rectangle val="-8.5546,42.1827;-3.1947,71.65"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -10517,8 +10476,8 @@ HttpServletResponse aus der Java-API#</dia:string>
       <dia:attribute name="orth_points">
         <dia:point val="-3.2447,42.9327"/>
         <dia:point val="-7.66705,42.9327"/>
-        <dia:point val="-7.66705,70.9"/>
-        <dia:point val="-7.3146,70.9"/>
+        <dia:point val="-7.66705,70.8"/>
+        <dia:point val="-6.8146,70.8"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="0"/>
@@ -10536,7 +10495,7 @@ HttpServletResponse aus der Java-API#</dia:string>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O26" connection="5"/>
-        <dia:connection handle="1" to="O74" connection="1"/>
+        <dia:connection handle="1" to="O73" connection="1"/>
       </dia:connections>
     </dia:object>
   </dia:layer>
