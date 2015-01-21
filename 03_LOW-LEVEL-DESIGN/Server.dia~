@@ -4099,7 +4099,7 @@ HttpServletResponse aus der Java-API#</dia:string>
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="24.6128,70.4754"/>
+            <dia:point val="24.6127,70.4753"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -4124,7 +4124,7 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:point val="23.0553,53.616"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="23.0053,53.566;30.1503,58.066"/>
+        <dia:rectangle val="23.0053,53.566;30.1503,57.266"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="23.0553,53.616"/>
@@ -4133,7 +4133,7 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:real val="7.0449999999999999"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="4.4000000000000004"/>
+        <dia:real val="3.6000000000000001"/>
       </dia:attribute>
       <dia:attribute name="name">
         <dia:string>#Dataset#</dia:string>
@@ -4261,29 +4261,6 @@ HttpServletResponse aus der Java-API#</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="1"/>
-          </dia:attribute>
-          <dia:attribute name="abstract">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="class_scope">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-        </dia:composite>
-        <dia:composite type="umlattribute">
-          <dia:attribute name="name">
-            <dia:string>#id#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="type">
-            <dia:string>#String#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="value">
-            <dia:string>##</dia:string>
-          </dia:attribute>
-          <dia:attribute name="comment">
-            <dia:string>##</dia:string>
-          </dia:attribute>
-          <dia:attribute name="visibility">
-            <dia:enum val="0"/>
           </dia:attribute>
           <dia:attribute name="abstract">
             <dia:boolean val="false"/>
@@ -6308,16 +6285,16 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:point val="-43.7397,47.1164"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-43.7897,47.0664;26.7778,54.3657"/>
+        <dia:rectangle val="-43.7897,47.0664;26.7778,54.3655"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="-43.7397,47.1164"/>
-        <dia:point val="-43.7397,50.3411"/>
-        <dia:point val="26.5778,50.3411"/>
-        <dia:point val="26.5778,53.5657"/>
+        <dia:point val="-43.7397,50.341"/>
+        <dia:point val="26.5778,50.341"/>
+        <dia:point val="26.5778,53.5655"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -6335,7 +6312,7 @@ HttpServletResponse aus der Java-API#</dia:string>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O30" connection="20"/>
-        <dia:connection handle="1" to="O27" connection="14"/>
+        <dia:connection handle="1" to="O27" connection="12"/>
       </dia:connections>
     </dia:object>
     <dia:object type="UML - Association" version="2" id="O37">
@@ -7013,7 +6990,7 @@ HttpServletResponse aus der Java-API#</dia:string>
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>#wird im Konstruktor mit CreationDate initialisiert#</dia:string>
+            <dia:string>#wird im Knostruktor mit CreationDate initialisiert#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="monospace" style="0" name="Courier"/>
@@ -7321,7 +7298,7 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:point val="40.8,69.125"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="30.1007,55.766;40.85,69.975"/>
+        <dia:rectangle val="30.1007,55.366;40.85,69.975"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -7329,8 +7306,8 @@ HttpServletResponse aus der Java-API#</dia:string>
       <dia:attribute name="orth_points">
         <dia:point val="40.8,69.125"/>
         <dia:point val="35.0754,69.125"/>
-        <dia:point val="35.0754,55.816"/>
-        <dia:point val="30.1507,55.816"/>
+        <dia:point val="35.0754,55.416"/>
+        <dia:point val="30.1507,55.416"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="0"/>
@@ -7354,7 +7331,7 @@ HttpServletResponse aus der Java-API#</dia:string>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O18" connection="3"/>
-        <dia:connection handle="1" to="O27" connection="14"/>
+        <dia:connection handle="1" to="O27" connection="12"/>
       </dia:connections>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O58">
