@@ -1357,19 +1357,19 @@ HttpServletResponse aus der Java-API#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O7">
       <dia:attribute name="obj_pos">
-        <dia:point val="41.75,25.725"/>
+        <dia:point val="37.2833,24.525"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="41.7,25.675;63.475,31.575"/>
+        <dia:rectangle val="37.2333,24.475;64.3983,31.175"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="41.75,25.725"/>
+        <dia:point val="37.2833,24.525"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="21.675000000000001"/>
+        <dia:real val="27.064999999999998"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="5.8000000000000007"/>
+        <dia:real val="6.5999999999999996"/>
       </dia:attribute>
       <dia:attribute name="name">
         <dia:string>#AnalyseManager#</dia:string>
@@ -1402,7 +1402,7 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:boolean val="true"/>
       </dia:attribute>
       <dia:attribute name="wrap_after_char">
-        <dia:int val="40"/>
+        <dia:int val="50"/>
       </dia:attribute>
       <dia:attribute name="comment_line_length">
         <dia:int val="17"/>
@@ -1672,7 +1672,54 @@ HttpServletResponse aus der Java-API#</dia:string>
                 <dia:enum val="0"/>
               </dia:attribute>
             </dia:composite>
+            <dia:composite type="umlparameter">
+              <dia:attribute name="name">
+                <dia:string>#userID#</dia:string>
+              </dia:attribute>
+              <dia:attribute name="type">
+                <dia:string>#String#</dia:string>
+              </dia:attribute>
+              <dia:attribute name="value">
+                <dia:string>##</dia:string>
+              </dia:attribute>
+              <dia:attribute name="comment">
+                <dia:string>##</dia:string>
+              </dia:attribute>
+              <dia:attribute name="kind">
+                <dia:enum val="0"/>
+              </dia:attribute>
+            </dia:composite>
           </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umloperation">
+          <dia:attribute name="name">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="stereotype">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="0"/>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="inheritance_type">
+            <dia:enum val="2"/>
+          </dia:attribute>
+          <dia:attribute name="query">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="parameters"/>
         </dia:composite>
       </dia:attribute>
       <dia:attribute name="template">
@@ -2023,16 +2070,16 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:point val="33.4354,28.925"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="32.6854,27.875;41.7497,29.775"/>
+        <dia:rectangle val="32.6854,27.075;37.2829,29.775"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="33.4354,28.925"/>
-        <dia:point val="37.9175,28.925"/>
-        <dia:point val="37.9175,28.625"/>
-        <dia:point val="41.6997,28.625"/>
+        <dia:point val="35.6842,28.925"/>
+        <dia:point val="35.6842,27.825"/>
+        <dia:point val="37.2329,27.825"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="0"/>
@@ -2050,7 +2097,7 @@ HttpServletResponse aus der Java-API#</dia:string>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O5" connection="10"/>
-        <dia:connection handle="1" to="O7" connection="18"/>
+        <dia:connection handle="1" to="O7" connection="20"/>
       </dia:connections>
     </dia:object>
     <dia:object type="UML - Association" version="2" id="O10">
@@ -2091,18 +2138,18 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="obj_pos">
-        <dia:point val="63.4753,28.625"/>
+        <dia:point val="64.3987,27.825"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="62.7253,27.875;69.1497,30.175"/>
+        <dia:rectangle val="63.6487,27.075;69.1497,30.175"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="63.4753,28.625"/>
-        <dia:point val="66.6375,28.625"/>
-        <dia:point val="66.6375,29.325"/>
+        <dia:point val="64.3987,27.825"/>
+        <dia:point val="67.0992,27.825"/>
+        <dia:point val="67.0992,29.325"/>
         <dia:point val="69.0997,29.325"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
@@ -2120,7 +2167,7 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:connections>
-        <dia:connection handle="0" to="O7" connection="18"/>
+        <dia:connection handle="0" to="O7" connection="20"/>
         <dia:connection handle="1" to="O8" connection="16"/>
       </dia:connections>
     </dia:object>
@@ -2834,21 +2881,25 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="obj_pos">
-        <dia:point val="52.5875,31.5747"/>
+        <dia:point val="50.8158,31.125"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="52.5375,31.5247;69.6325,34.8753"/>
+        <dia:rectangle val="50.7658,31.075;69.6325,36.3417"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="52.5875,31.5747"/>
-        <dia:point val="52.5875,32.625"/>
-        <dia:point val="69.4325,32.625"/>
-        <dia:point val="69.4325,34.0753"/>
+        <dia:point val="50.8158,31.125"/>
+        <dia:point val="50.8158,36.2917"/>
+        <dia:point val="58.2757,36.2917"/>
+        <dia:point val="58.2757,33.369"/>
+        <dia:point val="69.4325,33.369"/>
+        <dia:point val="69.4325,34.125"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
         <dia:enum val="1"/>
@@ -2863,8 +2914,8 @@ HttpServletResponse aus der Java-API#</dia:string>
         <dia:color val="#000000"/>
       </dia:attribute>
       <dia:connections>
-        <dia:connection handle="0" to="O7" connection="18"/>
-        <dia:connection handle="1" to="O11" connection="14"/>
+        <dia:connection handle="0" to="O7" connection="6"/>
+        <dia:connection handle="1" to="O11" connection="1"/>
       </dia:connections>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O19">
@@ -10496,6 +10547,79 @@ HttpServletResponse aus der Java-API#</dia:string>
       <dia:connections>
         <dia:connection handle="0" to="O26" connection="5"/>
         <dia:connection handle="1" to="O73" connection="1"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="UML - Association" version="2" id="O85">
+      <dia:attribute name="name">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="direction">
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="show_direction">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="assoc_type">
+        <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="role_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_a">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_a">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_a">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="role_b">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="multipicity_b">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="visibility_b">
+        <dia:enum val="3"/>
+      </dia:attribute>
+      <dia:attribute name="show_arrow_b">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="obj_pos">
+        <dia:point val="78.0625,31.925"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="78.0125,27.8412;108.614,33.775"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="78.0625,31.925"/>
+        <dia:point val="78.0625,32.975"/>
+        <dia:point val="93.2883,32.975"/>
+        <dia:point val="93.2883,27.8912"/>
+        <dia:point val="108.564,27.8912"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="orth_autoroute">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="text_colour">
+        <dia:color val="#000000"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O8" connection="6"/>
+        <dia:connection handle="1" to="O54" connection="3"/>
       </dia:connections>
     </dia:object>
   </dia:layer>
