@@ -4,7 +4,7 @@ public class Test{
 	
 	@org.junit.Test
 	public void test1(){
-		assertEquals(true,true);
+		assertEquals(false,true);
 	}
 	
 }
