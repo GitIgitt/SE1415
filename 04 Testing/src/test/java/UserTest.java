@@ -7,56 +7,65 @@ import org.kramerlab.atmocalc.objects.*;
  * - muss nach dem @ einen Punkt enthalten
  * - muss vor dem @ mindestens ein Zeichen besitzen
  * - muss zwischen dem @ und dem Punkt mindesetens ein Zeichen besitzen
- * - ...
+ * - darf keine Sonderzeichen wie z.B. ein Leerzeichen enthalten
  * 
  * x@y.z mit |x| >= 1, |y| >= 1 und |z| >= 2
  * 
- * Strings generieren?
  */
 
-public class TestUserSetMail {
+public class UserTest {
 	
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void test1() throws Exception{
+	public void testUser1() throws Exception {
 		(new User()).setMail(null);
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void test2() throws Exception{
+	public void testUser2() throws Exception {
 		(new User()).setMail("");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void test3() throws Exception{
+	public void testUser3() throws Exception {
 		(new User()).setMail("test3");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void test4() throws Exception{
+	public void testUser4() throws Exception {
 		(new User()).setMail("test3@");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void test5() throws Exception{
+	public void testUser5() throws Exception {
 		(new User()).setMail("test5@test5");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void test6() throws Exception{
+	public void testUser6() throws Exception {
 		(new User()).setMail("test6@.");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void test7() throws Exception{
+	public void testUser7() throws Exception {
 		(new User()).setMail("test7@.test7");
 	}
 	
+	@org.junit.Test (expected = IllegalArgumentException.class)
+	public void testUser8() throws Exception {
+		(new User()).setMail("te st8@.test8.de");
+	}
+	
+	@org.junit.Test (expected = IllegalArgumentException.class)
+	public void testUser9() throws Exception {
+		(new User()).setMail("test9@.te_st9.de");
+	}
+	
 	@org.junit.Test
-	public void test8() throws Exception{
+	public void testUser10() throws Exception {
 		User test = new User();
 		test.setMail("test@test.de");
-		assertEquals("test@test.de", test.email);
+		assertEquals("test@test.de", test.getMail());
 	}
 	
 }
