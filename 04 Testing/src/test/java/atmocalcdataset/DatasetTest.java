@@ -1,3 +1,4 @@
+package atmocalcdataset;
 import static org.junit.Assert.*;
 
 import org.kramerlab.atmocalc.objects.*;
