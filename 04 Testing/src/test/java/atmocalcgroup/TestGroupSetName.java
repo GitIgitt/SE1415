@@ -1,4 +1,4 @@
-package SetName;
+package atmocalcgroup;
 
 import static org.junit.Assert.*;
 
