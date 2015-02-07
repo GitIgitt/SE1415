@@ -10,7 +10,7 @@ import org.kramerlab.atmocalc.objects.*;
  */
 public class SetNameTest {
 	
-	final char[] zeichen = "acdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
+	final char[] zeichen = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
 	
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
@@ -77,7 +77,8 @@ public class SetNameTest {
 			}
 			String s = new String(testString);
 			test.setName(s);
-			assertEquals(s, test.getName());
+			//Strings toLowercase eventuell noch ersetzen 
+			assertEquals(s.toLowerCase(), test.getName().toLowerCase());
 		}	
 	}
 }

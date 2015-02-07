@@ -5,7 +5,6 @@ import org.kramerlab.atmocalc.objects.Package;
 
 /* Gültige Nutzernamen bestehen aus mindestens 3 und maximal 20 Zeichen 
  * zulässige Zeichen sind Buchstaben von a-z (keine Umlaute) und Ziffern von 0-9
- * zwischen Klein- und Großbuchstaben wird nicht unterschieden
  * unzulässig sind Sonderzeichen sowie Leerzeichen
  */
 public class SetNameTest {
