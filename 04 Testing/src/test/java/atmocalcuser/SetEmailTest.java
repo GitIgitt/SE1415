@@ -1,4 +1,5 @@
 package atmocalcuser;
+
 import static org.junit.Assert.*;
 
 import org.kramerlab.atmocalc.objects.*;
@@ -14,7 +15,7 @@ import org.kramerlab.atmocalc.objects.*;
  * 
  */
 
-public class SetEmail {
+public class SetEmailTest {
 	
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
