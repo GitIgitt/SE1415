@@ -2,6 +2,9 @@ package atmocalcuser;
 import static org.junit.Assert.*;
 import junit.framework.TestCase;
 
+import org.junit.After;
+import org.junit.Before;
+import org.kramerlab.atmocalc.database.accessors.ManagerAccessor;
 import org.kramerlab.atmocalc.objects.*;
 
 /* Gültige Nutzernamen bestehen aus mindestens 3 und maximal 20 Zeichen 
@@ -9,57 +12,68 @@ import org.kramerlab.atmocalc.objects.*;
  * zwischen Klein- und Großbuchstaben wird nicht unterschieden
  * unzulässig sind Sonderzeichen sowie Leerzeichen
  */
-public class SetNameTest extends TestCase{
+public class SetNameTest{
 	
 	final char[] zeichen = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
 	
+	User user;
+	ManagerAccessor ac;
+	@Before
 	public void setUp(){
-		
+		ac = new ManagerAccessor();
+		user = ac.newUser("test", "test@test.de", "test");
 	}
+	@After
+	public void tearDown(){
+		//Löschen von dem Testnutzer 
+		//
+		user.accessor.delete();
+	}
+	
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser1() throws Exception {
-		(new User()).setName(null);
+		user.setName(null);
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser2() throws Exception {
-		(new User()).setName("");
+		user.setName("");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser3() throws Exception {
-		(new User()).setName("t");
+		user.setName("t");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser4() throws Exception {
-		(new User()).setName("te");
+		user.setName("te");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser5() throws Exception {
-		(new User()).setName("&§$§$>/");
+		user.setName("&§$§$>/");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser6() throws Exception {
-		(new User()).setName("test6@.");
+		user.setName("test6@.");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser7() throws Exception {
-		(new User()).setName("test 7");
+		user.setName("test 7");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser8() throws Exception {
-		(new User()).setName("test8$");
+		user.setName("test8$");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser9() throws Exception {
-		(new User()).setName("test123456891011121920");
+		user.setName("test123456891011121920");
 	}
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser10() throws Exception {
@@ -67,12 +81,12 @@ public class SetNameTest extends TestCase{
 		for (int i = 0; i < 10000;i++){
 			test[i] = zeichen[(int)(Math.random()*zeichen.length)];
 		}
-		(new User()).setName(new String(test));
+		user.setName(new String(test));
 	}
 	
 	@org.junit.Test
 	public void testUser11() throws Exception {
-		User test = new User();
+		User test = user;
 		char[] testString;
 		for (int i = 0;  i < 100; i++){
 			testString = new char[(int)(Math.random()*17)+3];
