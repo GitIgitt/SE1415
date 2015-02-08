@@ -2,6 +2,8 @@ package atmocalcdataset;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
+import org.junit.Before;
 import org.kramerlab.atmocalc.objects.*;
 
 /* Gültige Namen für einen Datensatz bestehen aus mindestens 3 und maximal 20 Zeichen 
@@ -13,50 +15,61 @@ import org.kramerlab.atmocalc.objects.*;
 public class TestDatasetSetName {
 	
 	final char[] zeichen = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
+	Dataset d1;
+	
+	@Before
+	public void setUp(){
+		Dataset d1 = new Dataset();
+	}
+	
+	@After
+	public void tearDown(){
+		d1.delete();
+	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testDataset1() throws Exception {
-		(new Dataset()).setName(null);
+		d1.setName(null);
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testDataset2() throws Exception {
-		(new Dataset()).setName("");
+		d1.setName("");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testDataset3() throws Exception {
-		(new Dataset()).setName("t");
+		d1.setName("t");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testDataset4() throws Exception {
-		(new Dataset()).setName("te");
+		d1.setName("te");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testDataset5() throws Exception {
-		(new Dataset()).setName("&§$§$>/");
+		d1.setName("&§$§$>/");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testDataset6() throws Exception {
-		(new Dataset()).setName("test6@.");
+		d1.setName("test6@.");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testDataset7() throws Exception {
-		(new Dataset()).setName("test 7");
+		d1.setName("test 7");
 	}
 		
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testDataset8() throws Exception {
-		(new Dataset()).setName("test8$");
+		d1.setName("test8$");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testDataset9() throws Exception {
-		(new Dataset()).setName("test123456891011121920");
+		d1.setName("test123456891011121920");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
@@ -65,12 +78,11 @@ public class TestDatasetSetName {
 		for (int i = 0; i < 10000;i++){
 			test[i] = zeichen[(int)(Math.random()*zeichen.length)];
 		}
-		(new Dataset()).setName(new String(test));
+		d1.setName(new String(test));
 	}
 	
 	@org.junit.Test
 	public void testDataset11() throws Exception {
-		Dataset test = new Dataset();
 		char[] testString;
 		for (int i = 0;  i < 100; i++){
 			testString = new char[(int)(Math.random()*17)+3];
@@ -78,9 +90,9 @@ public class TestDatasetSetName {
 				testString[j] = zeichen[(int)(Math.random()*zeichen.length)];
 			}
 			String s = new String(testString);
-			test.setName(s);
+			d1.setName(s);
 			//assertEquals(s, test.getName());
-			assertTrue(s.equalsIgnoreCase(test.getName()));
+			assertTrue(s.equalsIgnoreCase(d1.getName()));
 		}	
 	}
 }
