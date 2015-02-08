@@ -68,6 +68,15 @@ public abstract class AtmoCalcObject
     public void setUri ( URI databaseId ){
     	return;
     }
+    
+    /**
+     * Operation delete
+     *
+     * 
+     */
+    public void delete(){
+    	
+    }
 
 }
 
