@@ -1,7 +1,10 @@
 package atmocalcpackages;
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.kramerlab.atmocalc.objects.Package;
+import org.kramerlab.atmocalc.objects.User;
+import org.kramerlab.atmocalc.manager.*;
 
 /* Gültige Nutzernamen bestehen aus mindestens 3 und maximal 20 Zeichen 
  * zulässige Zeichen sind Buchstaben von a-z (keine Umlaute) und Ziffern von 0-9
@@ -10,51 +13,57 @@ import org.kramerlab.atmocalc.objects.Package;
 public class SetNameTest {
 	
 	final char[] zeichen = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
-	
+	Package testpackage;
+	AtmoCalcManager ma = new AtmoCalcManager(null);
+	User user = ma.newUser("test", "test@te.de", "test");
+	@Before
+	public void setUp(){
+		testpackage = ma.newPackage(user);
+	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testPackage1() throws Exception {
-		(new Package(null,null)).setName(null);
+		(testpackage).setName(null);
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testPackage2() throws Exception {
-		(new Package(null,null)).setName("");
+		(testpackage).setName("");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testPackage3() throws Exception {
-		(new Package(null,null)).setName("t");
+		(testpackage).setName("t");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testPackage4() throws Exception {
-		(new Package(null,null)).setName("te");
+		(testpackage).setName("te");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testPackage5() throws Exception {
-		(new Package(null,null)).setName("&§$§$>/");
+		(testpackage).setName("&§$§$>/");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testPackage6() throws Exception {
-		(new Package(null,null)).setName("test6@.");
+		(testpackage).setName("test6@.");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testPackage7() throws Exception {
-		(new Package(null,null)).setName("test 7");
+		(testpackage).setName("test 7");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testPackage8() throws Exception {
-		(new Package(null,null)).setName("test8$");
+		(testpackage).setName("test8$");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testPackage9() throws Exception {
-		(new Package(null,null)).setName("test123456891011121920");
+		(testpackage).setName("test123456891011121920");
 	}
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testPackage10() throws Exception {
@@ -62,12 +71,12 @@ public class SetNameTest {
 		for (int i = 0; i < 10000;i++){
 			test[i] = zeichen[(int)(Math.random()*zeichen.length)];
 		}
-		(new Package(null,null)).setName(new String(test));
+		(testpackage).setName(new String(test));
 	}
 	
 	@org.junit.Test
 	public void testPackage11() throws Exception {
-		Package test = new Package(null,null);
+		Package test = testpackage;
 		char[] testString;
 		for (int i = 0;  i < 100; i++){
 			testString = new char[(int)(Math.random()*17)+3];

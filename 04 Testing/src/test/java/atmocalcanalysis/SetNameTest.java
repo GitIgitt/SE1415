@@ -1,78 +1,88 @@
-package atmocalcuser;
+package atmocalcanalysis;
 import static org.junit.Assert.*;
-import junit.framework.TestCase;
 
-import org.kramerlab.atmocalc.objects.*;
+import org.junit.After;
+import org.junit.Before;
+import org.kramerlab.atmocalc.objects.Analysis;
+import org.kramerlab.atmocalc.objects.Package;
+import org.kramerlab.atmocalc.analysis.Analyzer;
+import org.kramerlab.atmocalc.manager.*;
 
 /* Gültige Nutzernamen bestehen aus mindestens 3 und maximal 20 Zeichen 
  * zulässige Zeichen sind Buchstaben von a-z (keine Umlaute) und Ziffern von 0-9
- * zwischen Klein- und Großbuchstaben wird nicht unterschieden
  * unzulässig sind Sonderzeichen sowie Leerzeichen
  */
-public class SetNameTest extends TestCase{
+public class SetNameTest {
 	
 	final char[] zeichen = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
+	Analysis analysis;
+	Analyzer an = new Analyzer();
 	
+	@Before
 	public void setUp(){
-		
+		analysis = an.createAnalysis();
+	}
+	
+	@After
+	public void tearDown(){
+		//Delete Analiysis
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testUser1() throws Exception {
-		(new User()).setName(null);
+	public void testPackage1() throws Exception {
+		(analysis).setName(null);
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testUser2() throws Exception {
-		(new User()).setName("");
+	public void testPackage2() throws Exception {
+		(analysis).setName("");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testUser3() throws Exception {
-		(new User()).setName("t");
+	public void testPackage3() throws Exception {
+		(analysis).setName("t");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testUser4() throws Exception {
-		(new User()).setName("te");
+	public void testPackage4() throws Exception {
+		(analysis).setName("te");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testUser5() throws Exception {
-		(new User()).setName("&§$§$>/");
+	public void testPackage5() throws Exception {
+		(analysis).setName("&§$§$>/");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testUser6() throws Exception {
-		(new User()).setName("test6@.");
+	public void testPackage6() throws Exception {
+		(analysis).setName("test6@.");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testUser7() throws Exception {
-		(new User()).setName("test 7");
+	public void testPackage7() throws Exception {
+		(analysis).setName("test 7");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testUser8() throws Exception {
-		(new User()).setName("test8$");
+	public void testPackage8() throws Exception {
+		(analysis).setName("test8$");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testUser9() throws Exception {
-		(new User()).setName("test123456891011121920");
+	public void testPackage9() throws Exception {
+		(analysis).setName("test123456891011121920");
 	}
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testUser10() throws Exception {
+	public void testPackage10() throws Exception {
 		char[] test = new char[10000];
 		for (int i = 0; i < 10000;i++){
 			test[i] = zeichen[(int)(Math.random()*zeichen.length)];
 		}
-		(new User()).setName(new String(test));
+		(analysis).setName(new String(test));
 	}
 	
 	@org.junit.Test
-	public void testUser11() throws Exception {
-		User test = new User();
+	public void testPackage11() throws Exception {
 		char[] testString;
 		for (int i = 0;  i < 100; i++){
 			testString = new char[(int)(Math.random()*17)+3];
@@ -80,9 +90,8 @@ public class SetNameTest extends TestCase{
 				testString[j] = zeichen[(int)(Math.random()*zeichen.length)];
 			}
 			String s = new String(testString);
-			test.setName(s);
-			//Strings toLowercase eventuell noch ersetzen 
-			assertEquals(s.toLowerCase(), test.getName().toLowerCase());
+			analysis.setName(s);
+			assertEquals(s, analysis.getName());
 		}	
 	}
 }
