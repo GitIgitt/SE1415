@@ -6,13 +6,13 @@ import java.util.ArrayList;
 
 import org.junit.After;
 import org.junit.Before;
-import org.kramerlab.atmocalc.manager.AtmoCalcManager;
+import org.kramerlab.atmocalc.database.accessors.ManagerAccessor;
 import org.kramerlab.atmocalc.objects.*;
 
 public class GetUriTest {
   final char[] zeichen = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
   ArrayList<User> testuser;
-  AtmoCalcManager ma = new AtmoCalcManager(null);
+  ManagerAccessor ac = new ManagerAccessor();
   @Before
   public void setUp(){
     testuser = new ArrayList<User>();
@@ -23,7 +23,7 @@ public class GetUriTest {
         testname[j] = zeichen[(int)(Math.random()*62)]; 
       }
       String s = new String(testname);
-      testuser.add(ma.newUser(s, s+"@test.de", "test"));
+      testuser.add(ac.newUser(s, s+"@test.de", "test"));
     }
   }
   @After

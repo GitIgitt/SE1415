@@ -36,56 +36,50 @@ public class SetNameTest{
   public void testUser12(){
     user2.setName("test1");
   }
-  
-  //--> Es darf kein neuer Nutzer mit bereits belegtem Namen angelegt werden
-  @org.junit.Test (expected = IllegalArgumentException.class)
-  public void testUser13(){
-    user3 = ac.newUser("test1", "test3@test.de", "test");
-  }  
-  
+    
   @org.junit.Test (expected = IllegalArgumentException.class)
   public void testUser1() throws Exception {
-    user.setName(null);
+    user1.setName(null);
   }
   
   @org.junit.Test (expected = IllegalArgumentException.class)
   public void testUser2() throws Exception {
-    user.setName("");
+    user1.setName("");
   }
   
   @org.junit.Test (expected = IllegalArgumentException.class)
   public void testUser3() throws Exception {
-    user.setName("t");
+    user1.setName("t");
   }
   
   @org.junit.Test (expected = IllegalArgumentException.class)
   public void testUser4() throws Exception {
-    user.setName("te");
+    user1.setName("te");
   }
   
   @org.junit.Test (expected = IllegalArgumentException.class)
   public void testUser5() throws Exception {
-    user.setName("&§$§$>/");
+    user1.setName("&§$§$>/");
   }
   
   @org.junit.Test (expected = IllegalArgumentException.class)
   public void testUser6() throws Exception {
-    user.setName("test6@.");
+    user1.setName("test6@.");
   }
   
   @org.junit.Test (expected = IllegalArgumentException.class)
   public void testUser7() throws Exception {
-    user.setName("test 7");
+    user1.setName("test 7");
   }
   
   @org.junit.Test (expected = IllegalArgumentException.class)
   public void testUser8() throws Exception {
-    user.setName("test8$");
+    user1.setName("test8$");
   }
   
   @org.junit.Test (expected = IllegalArgumentException.class)
   public void testUser9() throws Exception {
-    user.setName("test123456891011121920");
+    user1.setName("test123456891011121920");
   }
   @org.junit.Test (expected = IllegalArgumentException.class)
   public void testUser10() throws Exception {
@@ -93,12 +87,12 @@ public class SetNameTest{
     for (int i = 0; i < 10000;i++){
       test[i] = zeichen[(int)(Math.random()*zeichen.length)];
     }
-    user.setName(new String(test));
+    user1.setName(new String(test));
   }
   
   @org.junit.Test
   public void testUser11() throws Exception {
-    User test = user;
+    User test = user1;
     char[] testString;
     for (int i = 0;  i < 100; i++){
       testString = new char[(int)(Math.random()*17)+3];
