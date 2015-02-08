@@ -4,6 +4,7 @@ import java.net.URI;
 
 import org.kramerlab.atmocalc.Permission;
 import org.kramerlab.atmocalc.objects.AtmoCalcObject;
+import org.kramerlab.atmocalc.objects.Package;
 import org.kramerlab.atmocalc.objects.Group;
 import org.kramerlab.atmocalc.objects.User;
 
