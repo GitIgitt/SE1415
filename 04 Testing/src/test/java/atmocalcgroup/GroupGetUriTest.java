@@ -6,21 +6,21 @@ import java.util.ArrayList;
 
 import org.junit.After;
 import org.junit.Before;
-import org.kramerlab.atmocalc.manager.AtmoCalcManager;
+import org.kramerlab.atmocalc.database.accessors.ManagerAccessor;
 import org.kramerlab.atmocalc.objects.*;
 
 public class GroupGetUriTest {
 
 	ArrayList<Group> testgroups;
-	AtmoCalcManager ma = new AtmoCalcManager(null);
+	ManagerAccessor ac = new ManagerAccessor();
 	User testuser;
 	
 	@Before
 	public void setUp(){
 		testgroups = new ArrayList<Group>();
-		testuser = ma.newUser("test", "test@email.de", "test");
+		testuser = ac.newUser("test", "test@email.de", "test");
 		for(int i = 0; i < 100; i++){
-			testgroups.add(ma.newGroup(testuser));
+			testgroups.add(ac.newGroup(testuser));
 		}
 		
 	}

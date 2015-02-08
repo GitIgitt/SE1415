@@ -4,9 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.After;
-import org.junit.Before;
-import org.kramerlab.atmocalc.database.accessors.ManagerAccessor;
 import org.kramerlab.atmocalc.objects.*;
 
 /* Gültige Namen für einen Datensatz bestehen aus mindestens 3 und maximal 20 Zeichen 
@@ -22,7 +19,7 @@ public class TestDatasetSetName {
 	
 	@Before
 	public void setUp(){
-		Dataset d1 = new Dataset();
+		d1 = new Dataset();
 	}
 	
 	@After
