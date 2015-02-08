@@ -30,9 +30,11 @@ public class GetMailTest {
 		}
 	}
 	@After
-	public void tearDown(){
-		//Delete User
-	}
+	  public void tearDown(){
+	    for (int i = 0; i < 100 ; i++ ) {
+	      testuser.get(i).delete();
+	    } // end of for
+	  }
 	
 	@org.junit.Test
 	public void testGetUser() throws Exception {
