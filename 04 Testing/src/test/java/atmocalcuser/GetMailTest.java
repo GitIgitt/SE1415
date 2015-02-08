@@ -9,7 +9,7 @@ import org.junit.Before;
 import org.kramerlab.atmocalc.manager.AtmoCalcManager;
 import org.kramerlab.atmocalc.objects.*;
 
-public class GetNameTest {
+public class GetMailTest {
 	final char[] zeichen = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
 	ArrayList<String> vergleich;
 	ArrayList<User> testuser;
@@ -37,7 +37,7 @@ public class GetNameTest {
 	@org.junit.Test
 	public void testGetUser() throws Exception {
 		for (int i = 0; i < testuser.size(); i++){
-			assertTrue((vergleich.get(i)).toLowerCase() == testuser.get(i).getName().toLowerCase());
+			assertTrue((vergleich.get(i)+"@test.de").toLowerCase() == testuser.get(i).getMail().toLowerCase());
 		}
 			
 	}
