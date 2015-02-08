@@ -15,20 +15,33 @@ public class SetNameTest{
   
   final char[] zeichen = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
   
-  User user;
+  User user1, user2, user3;
   ManagerAccessor ac;
   @Before
   public void setUp(){
     ac = new ManagerAccessor();
-    user = ac.newUser("test", "test@test.de", "test");
+    user1 = ac.newUser("test1", "test1@test.de", "test");
+    user2 = ac.newUser("test2", "test2@test.de", "test");
   }
   @After
   public void tearDown(){
     //Löschen von dem Testnutzer 
-    //
-    user.delete();
+    user1.delete();
+    user2.delete();
   }
   
+  //Nutzername darf nicht doppelt sein, damit Methode getUserByName funktioniert
+  //--> Name darf nicht auf bereits vorhandenen geaendert werden
+  @org.junit.Test (expected = IllegalArgumentException.class)
+  public void testUser12(){
+    user2.setName("test1");
+  }
+  
+  //--> Es darf kein neuer Nutzer mit bereits belegtem Namen angelegt werden
+  @org.junit.Test (expected = IllegalArgumentException.class)
+  public void testUser13(){
+    user3 = ac.newUser("test1", "test3@test.de", "test");
+  }  
   
   @org.junit.Test (expected = IllegalArgumentException.class)
   public void testUser1() throws Exception {
