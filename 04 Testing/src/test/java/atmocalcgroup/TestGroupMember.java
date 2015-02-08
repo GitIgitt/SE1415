@@ -7,7 +7,7 @@ import org.kramerlab.atmocalc.objects.*;
 import org.kramerlab.atmocalc.database.accessors.*;
 
 
-public class GroupTest {
+public class TestGroupMember {
   User user1;
   User user2;
   User user3;
@@ -29,7 +29,7 @@ public class GroupTest {
   
   @After
   public void tearDown(){
-    //Testbenutzer und Testgruppen wiedeer aus Datenbank löschen
+    //Testbenutzer und Testgruppen wieder aus Datenbank löschen
     group1.delete();
     group2.delete();
     group3.delete();
@@ -40,55 +40,43 @@ public class GroupTest {
   
   // Ein Nutzer, der nicht Member einer Gruppe ist, darf nicht aus dem Memberset geloescht werden koennen (existiert nicht)
   @org.junit.Test (expected = IllegalArgumentException.class)
-  public void testGroup1() throws Exception {
+  public void testGroupMember1() throws Exception {
     group1.removeMember(user2);
   }
   
   // Der gleiche Nutzer darf nicht einer Gruppe hinzugefuegt werden koennen, in der er schon Member ist
   @org.junit.Test (expected = IllegalArgumentException.class)
-  public void testGroup2() throws Exception {
+  public void testGroupMember2() throws Exception {
     group1.addMember(user2);
     group1.addMember(user2);
   }
   
-  // Der Besitzer der Gruppe kann nicht nochmal als member hinzugefügt werden
+  // Der Besitzer der Gruppe kann nicht nochmal als member hinzugefuegt werden
   @org.junit.Test (expected = IllegalArgumentException.class)
-  public void testGroup3() throws Exception{
+  public void testGroupMember3() throws Exception{
     group1.addMember(user1);
   }  
   
-  // Das null-Objekt darf nicht dem Memberset hinzugefügt werden koennen
+  // Das null-Objekt darf nicht dem Memberset hinzugefuegt werden koennen
   @org.junit.Test (expected = IllegalArgumentException.class)
-  public void testGroup4() throws Exception {
+  public void testGroupMember4() throws Exception {
     group1.addMember(null);
   }
   
   // Das null-Objekt darf nicht aus dem Memberset geloescht werden koennen
   @org.junit.Test (expected = IllegalArgumentException.class)
-  public void testGroup5() throws Exception {
+  public void testGroupMember5() throws Exception {
     group1.removeMember(null);
   }
   
   //Benutzer kann in mehreren Gruppen sein
   @org.junit.Test
-  public void testGroup6() throws Exception {
+  public void testGroupMember6() throws Exception {
     group1.addMember(user3);
     group2.addMember(user3);
     group3.addMember(user1);
     group1.removeMember(user3);
     group3.removeMember(user1);
-  }
-  
-  //Der Besitzer einer Gruppe darf nicht aus der Gruppe gelöscht werden
-  @org.junit.Test (expected = IllegalArgumentException.class)
-  public void testGroup7() throws Exception{
-    group2.removeMember(user2);
-  }
-  
-  //Solange ein Benutzer Besitzer einer Gruppe ist, darf er nicht gelöscht werden
-  @org.junit.Test (expected = IllegalArgumentException.class)
-  public void testGroup8() throws Exception{
-    user3.delete();
   }
 }  
 
