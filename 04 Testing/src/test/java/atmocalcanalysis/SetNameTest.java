@@ -4,9 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.kramerlab.atmocalc.objects.Analysis;
-import org.kramerlab.atmocalc.objects.Package;
 import org.kramerlab.atmocalc.analysis.Analyzer;
-import org.kramerlab.atmocalc.manager.*;
 
 /* Gültige Analysenamen bestehen aus mindestens 3 und maximal 20 Zeichen 
  * zulässige Zeichen sind Buchstaben von a-z (keine Umlaute) und Ziffern von 0-9
@@ -25,7 +23,7 @@ public class SetNameTest {
   
   @After
   public void tearDown(){
-    //Delete Analysis
+    analysis.delete();
   }
   
   @org.junit.Test (expected = IllegalArgumentException.class)
