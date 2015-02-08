@@ -1,22 +1,27 @@
 package atmocalcgroup;
 import static org.junit.Assert.*;
 
+import org.junit.After;
+import org.junit.Before;
 import org.kramerlab.atmocalc.objects.*;
-import org.kramerlab.atmocalc.accessors.*;
+import org.kramerlab.atmocalc.database.accessors.*;
 
 
 public class GroupTest {
   User user1;
   User user2;
+  User user3;
   Group group1;
+  Group group2;
+  Group group3;
   ManagerAccessor ma = new ManagerAccessor();
   
   @Before
   public void setUp(){
     //Testbenutzer und Testgruppen anlegen
-    user1 = ma.newUser("testUser1";"abc@def.de";"abc");
-    user2 = ma.newUser("testUser2";"def@ghi.de";"def");
-    user3 = ma.newUser("testUser3";"ghi@jkl.de";"ghi");
+    user1 = ma.newUser("testUser1","abc@def.de","abc");
+    user2 = ma.newUser("testUser2","def@ghi.de","def");
+    user3 = ma.newUser("testUser3","ghi@jkl.de","ghi");
     group1 = ma.newGroup(user1);
     group2 = ma.newGroup(user2);
     group3 = ma.newGroup(user3);
@@ -25,12 +30,12 @@ public class GroupTest {
   @After
   public void tearDown(){
     //Testbenutzer und Testgruppen wiedeer aus Datenbank löschen
-    group1.accessor.delete();
-    group2.accessor.delete();
-    group3.accessor.delete();
-    user1.accessor.delete();
-    user2.accessor.delete();
-    user3.accessor.delete();
+    group1.delete();
+    group2.delete();
+    group3.delete();
+    user1.delete();
+    user2.delete();
+    user3.delete();
   }
   
   // Ein Nutzer, der nicht Member einer Gruppe ist, darf nicht aus dem Memberset geloescht werden koennen (existiert nicht)
@@ -83,7 +88,7 @@ public class GroupTest {
   //Solange ein Benutzer Besitzer einer Gruppe ist, darf er nicht gelöscht werden
   @org.junit.Test (expected = IllegalArgumentException.class)
   public void testGroup8() throws Exception{
-    user3.accessor.delete();
+    user3.delete();
   }
 }  
 
