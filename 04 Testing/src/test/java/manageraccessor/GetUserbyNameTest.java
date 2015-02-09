@@ -46,10 +46,28 @@ public class GetUserbyNameTest {
 
 	@org.junit.Test
 	public void testGetUserbyName3() {
-		user1.setName("test1_1");
+		user1.setName("test4");
 		assertFalse((user1 == ac.getUserByName("test1")));
-		assertTrue((user1 == ac.getUserByName("test1_1")));
-		assertTrue((user2 == ac.getUserByName("test2")));
-		assertTrue((user3 == ac.getUserByName("test3")));
+		assertTrue((user1 == ac.getUserByName("test4")));
 	}
+	
+	@org.junit.Test
+	public void testGetUserbyName4() {
+		user1.setName("test4");
+		user2.setName("test1");
+		assertTrue(user2 == ac.getUserByName("test1"));
+		assertFalse(user1 == ac.getUserByName("test1"));
+		assertTrue(user1 == ac.getUserByName("test4"));
+	}
+	
+	@org.junit.Test
+	public void testGetUserbyName5() {
+		user1.setName("test4");
+		assertFalse(user1 == ac.getUserByName("test1"));
+		assertTrue(user1 == ac.getUserByName("test4"));
+		user1.setName("test1");
+		assertFalse(user1 == ac.getUserByName("test4"));
+		assertTrue(user1 == ac.getUserByName("test1"));
+	}
+	
 }
