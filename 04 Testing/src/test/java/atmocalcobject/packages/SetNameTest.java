@@ -1,4 +1,4 @@
-package atmocalcpackages;
+package atmocalcobject.packages;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
@@ -90,7 +90,7 @@ public class SetNameTest {
       }
       String s = new String(testString);
       testpackage.setName(s);
-      assertEquals(s, testpackage.getName());
+      assertEquals(s.toLowerCase(), testpackage.getName().toLowerCase());
     } 
   }
 }

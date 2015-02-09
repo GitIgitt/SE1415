@@ -1,4 +1,4 @@
-package atmocalcpackages;
+package atmocalcobject.packages;
 import static org.junit.Assert.*;
 
 import org.junit.After;
@@ -7,7 +7,7 @@ import org.kramerlab.atmocalc.objects.*;
 import org.kramerlab.atmocalc.objects.Package;
 import org.kramerlab.atmocalc.database.accessors.*;
 
-public class PackageReaderWriterTest {
+public class ReaderWriterTest {
 	User user1;
 	Package package1;
 	ManagerAccessor ma = new ManagerAccessor();  

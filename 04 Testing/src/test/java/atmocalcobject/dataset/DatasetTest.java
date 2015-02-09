@@ -1,4 +1,4 @@
-package atmocalcdataset;
+package atmocalcobject.dataset;
 
 import static org.junit.Assert.*;
 

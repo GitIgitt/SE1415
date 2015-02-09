@@ -10,8 +10,7 @@ import org.kramerlab.atmocalc.database.accessors.ManagerAccessor;
 import org.kramerlab.atmocalc.objects.User;
 
 public class NewUserTest {
-	final char[] zeichen = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-			.toCharArray();
+	final char[] zeichen = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
 	ManagerAccessor ac;
 	ArrayList<User> testuser;
 	User user1;

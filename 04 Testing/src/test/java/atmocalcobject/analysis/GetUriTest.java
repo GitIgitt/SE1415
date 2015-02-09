@@ -1,4 +1,4 @@
-package atmocalcanalysis;
+package atmocalcobject.analysis;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
@@ -9,10 +9,6 @@ import org.kramerlab.atmocalc.objects.Analysis;
 import org.kramerlab.atmocalc.analysis.Analyzer;
 
 
-/* Gültige Analysenamen bestehen aus mindestens 3 und maximal 20 Zeichen 
- * zulässige Zeichen sind Buchstaben von a-z (keine Umlaute) und Ziffern von 0-9
- * unzulässig sind Sonderzeichen sowie Leerzeichen
- */
 public class GetUriTest {
   
   final char[] zeichen = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();

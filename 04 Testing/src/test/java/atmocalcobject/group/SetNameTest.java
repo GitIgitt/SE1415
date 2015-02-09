@@ -1,88 +1,92 @@
-package atmocalcdataset;
+package atmocalcobject.group;
 
 import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
+import org.kramerlab.atmocalc.database.accessors.*;
 import org.kramerlab.atmocalc.objects.*;
 
-/* Gültige Namen für einen Datensatz bestehen aus mindestens 3 und maximal 20 Zeichen 
+/* Gültige Gruppennamen bestehen aus mindestens 3 und maximal 20 Zeichen 
  * zulässige Zeichen sind Buchstaben von a-z (keine Umlaute) und Ziffern von 0-9
  * zwischen Klein- und Großbuchstaben wird nicht unterschieden
  * unzulässig sind Sonderzeichen sowie Leerzeichen
  */
 
-public class TestDatasetSetName {
+public class SetNameTest {
 	
 	final char[] zeichen = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
-	Dataset d1;
+	ManagerAccessor ma = new ManagerAccessor();
+	Group group1;
+	User user1;
 	
 	@Before
 	public void setUp(){
-		d1 = new Dataset();
+		user1 = ma.newUser("abc", "abc@mail.de", "abc");
+		group1 = ma.newGroup(user1);
 	}
 	
 	@After
 	public void tearDown(){
-		d1.delete();
+		group1.delete();
+		user1.delete();
+	}	
+	@org.junit.Test (expected = IllegalArgumentException.class)
+	public void testGroup1() throws Exception {
+		group1.setName(null);
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testDataset1() throws Exception {
-		d1.setName(null);
+	public void testGroup2() throws Exception {
+		group1.setName("");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testDataset2() throws Exception {
-		d1.setName("");
+	public void testGroup3() throws Exception {
+		group1.setName("t");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testDataset3() throws Exception {
-		d1.setName("t");
+	public void testGroup4() throws Exception {
+		group1.setName("te");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testDataset4() throws Exception {
-		d1.setName("te");
+	public void testGroup5() throws Exception {
+		group1.setName("&§$§$>/");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testDataset5() throws Exception {
-		d1.setName("&§$§$>/");
+	public void testGroup6() throws Exception {
+		group1.setName("test6@.");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testDataset6() throws Exception {
-		d1.setName("test6@.");
-	}
-	
-	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testDataset7() throws Exception {
-		d1.setName("test 7");
+	public void testGroup7() throws Exception {
+		group1.setName("test 7");
 	}
 		
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testDataset8() throws Exception {
-		d1.setName("test8$");
+	public void testGroup8() throws Exception {
+		group1.setName("test8$");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testDataset9() throws Exception {
-		d1.setName("test123456891011121920");
+	public void testGroup9() throws Exception {
+		group1.setName("test123456891011121920");
 	}
 	
 	@org.junit.Test (expected = IllegalArgumentException.class)
-	public void testDataset10() throws Exception {
+	public void testGroup10() throws Exception {
 		char[] test = new char[10000];
 		for (int i = 0; i < 10000;i++){
 			test[i] = zeichen[(int)(Math.random()*zeichen.length)];
 		}
-		d1.setName(new String(test));
+		group1.setName(new String(test));
 	}
 	
 	@org.junit.Test
-	public void testDataset11() throws Exception {
+	public void testGroup11() throws Exception {
 		char[] testString;
 		for (int i = 0;  i < 100; i++){
 			testString = new char[(int)(Math.random()*17)+3];
@@ -90,9 +94,10 @@ public class TestDatasetSetName {
 				testString[j] = zeichen[(int)(Math.random()*zeichen.length)];
 			}
 			String s = new String(testString);
-			d1.setName(s);
-			//assertEquals(s, test.getName());
-			assertTrue(s.equalsIgnoreCase(d1.getName()));
+			group1.setName(s); 
+			assertTrue(s.equalsIgnoreCase(group1.getName()));
 		}	
 	}
 }
+	
+

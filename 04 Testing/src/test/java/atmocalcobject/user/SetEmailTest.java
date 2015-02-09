@@ -1,4 +1,4 @@
-package atmocalcuser;
+package atmocalcobject.user;
 
 import static org.junit.Assert.*;
 

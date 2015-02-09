@@ -1,4 +1,4 @@
-package atmocalcgroup;
+package atmocalcobject.group;
 
 import static org.junit.Assert.*;
 
@@ -9,7 +9,7 @@ import org.junit.Before;
 import org.kramerlab.atmocalc.database.accessors.ManagerAccessor;
 import org.kramerlab.atmocalc.objects.*;
 
-public class GroupGetUriTest {
+public class GetUriTest {
 
 	ArrayList<Group> testgroups;
 	ManagerAccessor ac = new ManagerAccessor();

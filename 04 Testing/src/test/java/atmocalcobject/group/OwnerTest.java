@@ -1,11 +1,11 @@
-package atmocalcgroup;
+package atmocalcobject.group;
 
 import org.junit.After;
 import org.junit.Before;
 import org.kramerlab.atmocalc.objects.*;
 import org.kramerlab.atmocalc.database.accessors.*;
 
-public class TestGroupOwner {
+public class OwnerTest {
 	User user1;
 	User user2;
 	Group group1;
