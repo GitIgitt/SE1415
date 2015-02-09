@@ -1,9 +1,11 @@
 package atmocalcuser;
 
 import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+
 import org.junit.After;
 import org.junit.Before;
-
 import org.kramerlab.atmocalc.database.accessors.*;
 import org.kramerlab.atmocalc.objects.*;
 
@@ -19,6 +21,7 @@ import org.kramerlab.atmocalc.objects.*;
  */
 
 public class SetEmailTest {
+	final char[] zeichen = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
 	User user1;
 	ManagerAccessor ma = new ManagerAccessor();
 	@Before
@@ -80,6 +83,29 @@ public class SetEmailTest {
 	public void testUser10() throws Exception {
 		user1.setMail("test@test.de");
 		assertEquals("test@test.de", user1.getMail());
+	}
+	
+	@org.junit.Test
+	public void testUser11(){
+		ArrayList<String> mails = new ArrayList<String>();
+		ArrayList<User> testuser = new ArrayList<User>();
+		char[] testname;
+		for (int i = 0; i < 100; i++) {
+			testname = new char[(int) (Math.random() * 17 + 3)];
+			for (int j = 0; j < testname.length; j++) {
+				testname[j] = zeichen[(int) (Math.random() * 62)];
+			}
+			String s = new String(testname);
+			mails.add(s+"@test.de");
+			testuser.add(ma.newUser(s, s + "@test.de", "test"));
+		}
+		for (int i = 0; i < testuser.size(); i++){
+			assertTrue((testuser.get(i).getMail() == mails.get(i)));
+		}
+		while(testuser.size()>0){
+			testuser.get(0).delete();
+			testuser.remove(0);
+		}
 	}
 	
 }
