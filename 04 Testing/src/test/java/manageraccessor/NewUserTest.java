@@ -125,51 +125,58 @@ public class NewUserTest {
 				"test2"));
 	}
 	
-
-	
+	// --> Es darf kein neuer Nutzer mit null als E-Mailadresse angelegt werden
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser15() throws Exception {
-		user1.setMail(null);
+		testuser.add(ac.newUser("test15", null, "test15"));
 	}
 	
+	// --> Es darf kein neuer Nutzer mit einer leeren E-Mailadresse angelegt werden
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser16() throws Exception {
-		user1.setMail("");
+		testuser.add(ac.newUser("test16", "", "test16"));
 	}
 	
+	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt werden
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser17() throws Exception {
-		user1.setMail("test3");
+		testuser.add(ac.newUser("test17", "test17", "test17"));
 	}
 	
+	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt werden
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser18() throws Exception {
-		user1.setMail("test3@");
+		testuser.add(ac.newUser("test18", "test18@", "test18"));
 	}
 	
+	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt werden
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser19() throws Exception {
-		user1.setMail("test5@test5");
+		testuser.add(ac.newUser("test19", "test19@test19", "test19"));
 	}
 	
+	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt werden
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser20() throws Exception {
-		user1.setMail("test6@.");
+		testuser.add(ac.newUser("test20", "test20@.", "test20"));
 	}
 	
+	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt werden
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser21() throws Exception {
-		user1.setMail("test7@.test7");
+		testuser.add(ac.newUser("test21", "test21@.test21", "test21"));
 	}
 	
+	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt werden
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser22() throws Exception {
-		user1.setMail("te st8@.test8.de");
+		testuser.add(ac.newUser("test22", "te st22@.test22.de", "test22"));
 	}
 	
+	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt werden
 	@org.junit.Test (expected = IllegalArgumentException.class)
 	public void testUser23() throws Exception {
-		user1.setMail("test9@.te_st9.de");
+		testuser.add(ac.newUser("test23", "test23@.te_st23.de", "test23"));
 	}
 	
 	@org.junit.Test
