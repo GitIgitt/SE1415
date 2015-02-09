@@ -10,6 +10,8 @@ import org.kramerlab.atmocalc.database.accessors.ManagerAccessor;
 import org.kramerlab.atmocalc.objects.User;
 
 public class NewUserTest {
+	final char[] zeichen = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+			.toCharArray();
 	ManagerAccessor ac;
 	ArrayList<User> testuser;
 	User user1;
@@ -124,65 +126,89 @@ public class NewUserTest {
 		testuser.add(ac.newUser("test1234567891011121920", "test14@test.de",
 				"test2"));
 	}
-	
+
 	// --> Es darf kein neuer Nutzer mit null als E-Mailadresse angelegt werden
-	@org.junit.Test (expected = IllegalArgumentException.class)
+	@org.junit.Test(expected = IllegalArgumentException.class)
 	public void testUser15() throws Exception {
 		testuser.add(ac.newUser("test15", null, "test15"));
 	}
-	
-	// --> Es darf kein neuer Nutzer mit einer leeren E-Mailadresse angelegt werden
-	@org.junit.Test (expected = IllegalArgumentException.class)
+
+	// --> Es darf kein neuer Nutzer mit einer leeren E-Mailadresse angelegt
+	// werden
+	@org.junit.Test(expected = IllegalArgumentException.class)
 	public void testUser16() throws Exception {
 		testuser.add(ac.newUser("test16", "", "test16"));
 	}
-	
-	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt werden
-	@org.junit.Test (expected = IllegalArgumentException.class)
+
+	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt
+	// werden
+	@org.junit.Test(expected = IllegalArgumentException.class)
 	public void testUser17() throws Exception {
 		testuser.add(ac.newUser("test17", "test17", "test17"));
 	}
-	
-	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt werden
-	@org.junit.Test (expected = IllegalArgumentException.class)
+
+	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt
+	// werden
+	@org.junit.Test(expected = IllegalArgumentException.class)
 	public void testUser18() throws Exception {
 		testuser.add(ac.newUser("test18", "test18@", "test18"));
 	}
-	
-	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt werden
-	@org.junit.Test (expected = IllegalArgumentException.class)
+
+	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt
+	// werden
+	@org.junit.Test(expected = IllegalArgumentException.class)
 	public void testUser19() throws Exception {
 		testuser.add(ac.newUser("test19", "test19@test19", "test19"));
 	}
-	
-	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt werden
-	@org.junit.Test (expected = IllegalArgumentException.class)
+
+	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt
+	// werden
+	@org.junit.Test(expected = IllegalArgumentException.class)
 	public void testUser20() throws Exception {
 		testuser.add(ac.newUser("test20", "test20@.", "test20"));
 	}
-	
-	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt werden
-	@org.junit.Test (expected = IllegalArgumentException.class)
+
+	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt
+	// werden
+	@org.junit.Test(expected = IllegalArgumentException.class)
 	public void testUser21() throws Exception {
 		testuser.add(ac.newUser("test21", "test21@.test21", "test21"));
 	}
-	
-	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt werden
-	@org.junit.Test (expected = IllegalArgumentException.class)
+
+	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt
+	// werden
+	@org.junit.Test(expected = IllegalArgumentException.class)
 	public void testUser22() throws Exception {
 		testuser.add(ac.newUser("test22", "te st22@.test22.de", "test22"));
 	}
-	
-	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt werden
-	@org.junit.Test (expected = IllegalArgumentException.class)
+
+	// --> Es darf kein neuer Nutzer mit einer ungültigen E-Mailadresse angelegt
+	// werden
+	@org.junit.Test(expected = IllegalArgumentException.class)
 	public void testUser23() throws Exception {
 		testuser.add(ac.newUser("test23", "test23@.te_st23.de", "test23"));
 	}
-	
+
 	@org.junit.Test
 	public void testUser24() throws Exception {
-		user1.setMail("test@test.de");
-		assertEquals("test@test.de", user1.getMail());
+		ArrayList<String> names = new ArrayList<String>();
+		ArrayList<String> mails = new ArrayList<String>();
+
+		char[] testname;
+		for (int i = 0; i < 100; i++) {
+			testname = new char[(int) (Math.random() * 17 + 3)];
+			for (int j = 0; j < testname.length; j++) {
+				testname[j] = zeichen[(int) (Math.random() * 62)];
+			}
+			String s = new String(testname);
+			names.add(s);
+			mails.add(s+"@test.de");
+			testuser.add(ac.newUser(s, s + "@test.de", "test"));
+		}
+		for (int i = 0; i < testuser.size(); i++){
+			assertTrue((testuser.get(i).getName() == names.get(i)));
+			assertTrue((testuser.get(i).getMail() == mails.get(i)));
+		}
 	}
-	
+
 }
